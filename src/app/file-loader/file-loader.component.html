@@ -1,0 +1,13 @@
+<div class="file-loader" id="fileLoader">
+  <p>Choose file to get the prediction.</p>
+  <p *ngIf="loaded">Chosen file: {{name}}</p>
+
+  <input name="myFile"
+         accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet, application/vnd.ms-excel"
+         type="file"
+         id="dataFile" (change)="setFile($event)">
+
+  <label for="dataFile">Choose{{loaded ? ' another' : ''}} File</label>
+  <p *ngIf="loaded">or</p>
+  <button *ngIf="loaded">Calculate prediction</button>
+</div>
