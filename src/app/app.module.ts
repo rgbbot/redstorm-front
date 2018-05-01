@@ -8,6 +8,8 @@ import { BannerComponent } from './banner/banner.component';
 import { FileLoaderComponent } from './file-loader/file-loader.component';
 import { FooterComponent } from './footer/footer.component';
 import { LoaderComponent } from './loader/loader.component';
+import { HttpModule } from '@angular/http';
+import { ResultComponent } from './result/result.component';
 
 
 @NgModule({
@@ -17,11 +19,13 @@ import { LoaderComponent } from './loader/loader.component';
     BannerComponent,
     FileLoaderComponent,
     FooterComponent,
-    LoaderComponent
+    LoaderComponent,
+    ResultComponent,
   ],
   imports: [
     BrowserModule,
-    ScrollToModule.forRoot()
+    ScrollToModule.forRoot(),
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
