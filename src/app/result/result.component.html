@@ -1,3 +1,29 @@
-<p>
-  result works!
-</p>
+<div class="result" id="result">
+  <div class="result__select">
+    <div class="select">
+      <select #s (change)="selectCountry(s.value)">
+        <option>Choose country</option>
+        <option *ngFor="let country of data" [value]="country.countryName">{{country.countryName}}</option>
+      </select>
+      <div class="select__arrow"></div>
+    </div>
+  </div>
+
+  <div class="result__data" *ngIf="chosenCountry">
+    <header>{{chosenCountry.countryName}}</header>
+    <div class="prediction">
+      <div class="prediction__bayess">
+        <h2>Bayess</h2>
+        <p>{{chosenCountry.bayessTrue * 100}} %</p>
+      </div>
+      <div class="prediction__nn">
+        <h2>NN</h2>
+        <p>{{chosenCountry.nnTrue * 100}} %</p>
+      </div>
+      <div class="prediction__total">
+        <h2>Total</h2>
+        <p>100%</p>
+      </div>
+    </div>
+  </div>
+</div>

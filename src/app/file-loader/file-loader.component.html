@@ -9,5 +9,11 @@
 
   <label for="dataFile">Choose{{loaded ? ' another' : ''}} File</label>
   <p *ngIf="loaded">or</p>
-  <button *ngIf="loaded">Calculate prediction</button>
+  <button *ngIf="loaded"
+          (click)='getPrediction()'
+          [scrollTo]="'#result'"
+          [scrollDuration]="600"
+          [scrollOffset]="-66">Calculate prediction</button>
 </div>
+
+<app-result *ngIf="result && result.length > 0" [data]="result"></app-result>
