@@ -81,7 +81,6 @@ export class FileLoaderComponent implements OnInit {
     this.getPredictedValuesFromExcel(objectJSON).subscribe(res => {
       let resSTR = JSON.stringify(res);
       let resJSON = JSON.parse(resSTR);
-      console.log(JSON.parse(resJSON._body));
       this.result = JSON.parse(resJSON._body);
     });
 
