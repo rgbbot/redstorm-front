@@ -18,11 +18,11 @@
       </div>
       <div class="prediction__nn">
         <h2>NN</h2>
-        <p>{{chosenCountry.nnTrue * 100}} %</p>
+        <p>{{chosenCountry.nnTrue}} %</p>
       </div>
       <div class="prediction__total">
         <h2>Total</h2>
-        <p>100%</p>
+        <p>{{(chosenCountry.bayessTrue * 100 + chosenCountry.nnTrue*1.2) / 2}}%</p>
       </div>
     </div>
   </div>

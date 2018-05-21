@@ -69,8 +69,8 @@ export class FileLoaderComponent implements OnInit {
 
       objectJSON[i]['gdp'] = gdpObj;
 
-      objectJSON[i]['nuclear'] = (objectJSON[i]['nuclear'] === 0) ? false : true;
-      objectJSON[i]['inWar'] = (objectJSON[i]['inWar'] === 0) ? false : true;
+      objectJSON[i]['nuclear'] = (objectJSON[i]['nuclear'] == 0) ? false : true;
+      objectJSON[i]['inWar'] = (objectJSON[i]['inWar'] == 0) ? false : true;
 
       delete objectJSON[i]['GDP_2012'];
       delete objectJSON[i]['GDP_2013'];
